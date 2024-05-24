@@ -28,7 +28,7 @@ def find_and_write_files(base_directory, output_filename):
 base_directory = './django'
 
 # Replace this with your desired output file path
-output_filename = './django.txt'
+output_filename = './django.src.txt'
 
 # Call the function to write the specified files' contents
 find_and_write_files(base_directory, output_filename)
