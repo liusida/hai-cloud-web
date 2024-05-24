@@ -7,6 +7,8 @@ services:
       POSTGRES_PASSWORD: ${DATABASE_SUPER_PASSWORD}
     ports:
       - 5432:5432
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
 
   adminer:
     image: adminer
@@ -16,7 +18,6 @@ services:
 
   django:
     build: ./django
-    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./django:/app
     ports:
